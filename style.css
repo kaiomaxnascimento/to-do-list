@@ -78,9 +78,9 @@ input::placeholder {
 
 .lista li {
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 2rem;
   align-items: center;
-  justify-content: flex-start;
   margin-bottom: 12px;
   background-color: rgb(67, 67, 119);
   border-radius: 4px;

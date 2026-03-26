@@ -22,7 +22,7 @@ function chekedList(event) {
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("checked");
     saveData();
-  } else if (event.target.tagName === "SPAN") {
+  } else if (event.target.classList.contains("remove")) {
     event.target.parentElement.remove("remove");
     saveData();
   }
@@ -30,6 +30,9 @@ function chekedList(event) {
 
 btn.addEventListener("click", generateList);
 lista.addEventListener("click", chekedList);
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") generateList();
+});
 
 function saveData() {
   localStorage.setItem("data", lista.innerHTML);
