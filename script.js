@@ -66,10 +66,13 @@ function progress() {
     if (checkado.classList.contains("checked") === true) checked++;
     textProgresso.innerText = `${checked} / ${total.length}`;
   });
-  if (checked === total.length) {
+  if (checked === total.length && total.length !== 0) {
     completed.classList.add("full");
+  } else if (total.length === 0) {
+    textProgresso.innerText = "";
   } else {
     completed.classList.remove("full");
   }
+  console.log(total.length);
 }
 progress();
