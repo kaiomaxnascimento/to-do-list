@@ -168,9 +168,13 @@ li.checked:hover::before {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   .input {
     flex-direction: column;
     align-items: center;
+  }
+
+  .progresso-cont {
+    font-size: 1.3rem;
   }
 }
